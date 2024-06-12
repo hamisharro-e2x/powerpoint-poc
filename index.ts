@@ -27,13 +27,23 @@ testEntry.fields.ingredients.forEach((section) => {
     align: pres.AlignH.center,
   });
 
-  slide.addTable(
-    section.values.map(({ name, amount }) => [
-      { text: name },
-      { text: amount },
-    ]),
-    { y: 110 }
-  );
+  if (section.values) {
+    slide.addTable(
+      section.values.map(({ name, amount }) => [
+        { text: name },
+        { text: amount },
+      ]),
+      { y: 110 }
+    );
+  } else {
+    slide.addText(section.amount, {
+      x: 1,
+      y: 110,
+      color: "363636",
+      fill: { color: "F1F1F1" },
+      align: pres.AlignH.center,
+    });
+  }
 });
 
 // 4. Save the Presentation

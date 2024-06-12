@@ -38,6 +38,7 @@ export const testEntry = {
         name: "Assembly",
         values: [{ name: "medium egg, beaten", amount: "1" }],
       },
+      { name: "Chicken", amount: "1" },
     ],
     description: `<core-list-section>
             <h3 id="preparation-steps-title">Preparation</h3>
